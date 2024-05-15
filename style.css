@@ -1,0 +1,104 @@
+/* ==== import goole font - ("Poppins", sans-serif) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* ==== gloabl css start ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* ==== gloabl css end ==== */
+/* ==== body css start ==== */
+body {
+  background-color: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+/* ==== body css emd ==== */
+/* ==== QR Code Reader css start ==== */
+.wrapper {
+  background: #0b85ff;
+  width: 420px;
+  height: 249px;
+  border-radius: 7px;
+  padding: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.wrapper.active {
+  height: 500px;
+}
+.wrapper form {
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 7px;
+}
+.wrapper form img {
+  display: none;
+  width: 150px;
+}
+.wrapper.active form img {
+  display: block;
+}
+form .qr-content {
+  text-align: center;
+  display: block;
+}
+.wrapper.active form .qr-content {
+  display: none;
+}
+form .qr-content i {
+  color: #0b85ff;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+form .qr-content p {
+  font-size: 17px;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #0b85ff;
+}
+.wrapper .details {
+  margin-top: 25px;
+}
+.wrapper .details textarea {
+  background: #0b85ff;
+  width: 100%;
+  height: 155px;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  border: 1.3px solid #fff;
+  border-radius: 7px;
+  resize: none;
+}
+.details .details-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+.details .details-btn button {
+  color: #0b85ff;
+  width: calc(100% / 2);
+  height: 46px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+  transition: 0.1s ease;
+}
+.details .details-btn button:active {
+  transform: scale(0.95);
+}
+/* ==== QR Code Reader css end ==== */
